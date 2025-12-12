@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Responsive Demo | Priya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Priya<span class="dot">.</span></div>
+      <nav class="nav" id="main-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="toggle menu" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Hi, I'm Priya — Frontend Developer</h1>
+        <p>Building responsive, accessible and interactive web experiences.</p>
+        <a class="btn" href="#work">View Work</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I learn by building — HTML, CSS, JavaScript and modern frameworks. I turn designs into working, responsive pages.</p>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <div class="container cards">
+        <article class="card">
+          <h3>Project 1</h3>
+          <p>Responsive landing page</p>
+        </article>
+        <article class="card">
+          <h3>Project 2</h3>
+          <p>Interactive UI with animations</p>
+        </article>
+        <article class="card">
+          <h3>Project 3</h3>
+          <p>React single page app</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: priyarrajbhar01@gmail.com</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Priya — Built with ❤️</p>
+    </div>
+  </footer>
+
+  
+
+  <!-- Small script to toggle nav on mobile (no frameworks) -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('main-nav');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

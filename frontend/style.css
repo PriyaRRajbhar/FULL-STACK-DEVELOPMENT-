@@ -1,0 +1,128 @@
+/* ===== Base (mobile-first) ===== */
+:root{
+  --accent:#2b6cb0;
+  --muted:#555;
+  --bg:#fafafa;
+  --card:#ffffff;
+  --radius:10px;
+  --container-width:1100px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--muted);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  width:92%;
+  max-width:var(--container-width);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:var(--card);
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 0;
+}
+.logo{font-weight:700;font-size:18px;color:var(--accent)}
+.logo .dot{color:#f56565}
+
+/* Nav - mobile: hidden by default behind toggle */
+/* Mobile: hide nav by default and make it collapsible */
+.nav{
+  max-height: 0;           /* collapsed */
+  overflow: hidden;        /* hide content when collapsed */
+  display: flex;
+  flex-direction: column;  /* stacked items on mobile */
+  gap: 8px;
+  align-items: flex-start;
+  transition: max-height .28s ease, padding .25s ease;
+  padding: 0;              /* no padding when collapsed */
+}
+
+/* When .open is added by JS, expand the nav */
+.nav.open{
+  max-height: 400px;       /* large enough to show items; fine-tune as needed */
+  padding: 10px 0;         /* restore vertical padding */
+}
+
+/* Links style inside mobile menu */
+.nav a{
+  width:100%;
+  padding:10px 12px;
+  border-radius:6px;
+  text-decoration: none;
+  color:var(--muted);
+}
+
+/* Show hamburger on mobile */
+.nav-toggle{
+  background:transparent;border:0;font-size:20px;display:block;
+}
+
+/* At tablet and above, show horizontal nav and hide toggle */
+@media (min-width: 700px){
+  .nav{
+    max-height: none;       /* no height limit */
+    overflow: visible;
+    flex-direction: row;
+    align-items:center;
+    padding: 0;
+  }
+  .nav-toggle{ display:none; }
+}
+
+/* Hero */
+.hero{
+  padding:48px 0;
+  text-align:left;
+}
+.hero-inner h1{font-size:24px;margin-bottom:12px;color:#222}
+.hero-inner p{margin-bottom:16px;color:var(--muted)}
+.btn{
+  display:inline-block;
+  padding:10px 16px;border-radius:8px;background:var(--accent);
+  color:white;text-decoration:none;font-weight:600;
+}
+
+/* Sections */
+.about{padding:28px 0}
+.work{padding:18px 0}
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{
+  background:var(--card);padding:16px;border-radius:var(--radius);border:1px solid #eee;
+}
+
+/* Footer */
+.site-footer{padding:20px 0;text-align:center;color:#666;border-top:1px solid #eee}
+
+/* ===== Small screens rules already ok.
+   ===== Now add responsive breakpoints ===== */
+
+/* Tablet and up */
+@media (min-width: 700px){
+  .hero-inner h1{font-size:32px}
+  .cards{flex-direction:row}
+  .card{flex:1}
+  .nav-toggle{display:none}
+  .nav{display:flex}
+}
+
+/* Desktop */
+@media (min-width: 1000px){
+  .hero{padding:80px 0}
+  .hero-inner h1{font-size:40px}
+}
