@@ -50,6 +50,7 @@ footer {
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -64,4 +65,23 @@ footer {
     font-weight: bold;
     font-size: 20px;
     border: 2px solid #ddd;
+}
+
+/* added hover effect for cards */
+
+.card:hover {
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s ease;
+}
+
+/* here we tell the browser to make the cards responsive  */
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
