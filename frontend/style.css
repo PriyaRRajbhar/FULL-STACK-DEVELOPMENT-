@@ -85,6 +85,15 @@ body{
   .nav-toggle{ display:none; }
 }
 
+/* animation with hamburger menu  */
+.nav-toggle {
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle.open {
+    transform: rotate(90deg);
+}
+
 /* Hero */
 .hero{
   padding:48px 0;
