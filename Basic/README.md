@@ -36,3 +36,19 @@
 # |      /  \                                         |
 # +---------------------------------------------------+
 
+# FLEXBOX
+# 🌟 WHAT YOU JUST LEARNED (VISUAL STORY)
+# Picture a group of 3 friends (cards):
+# Before Flexbox → they stand awkwardly, not knowing spacing
+# After Flexbox → they line up perfectly
+# equal gaps
+# centered
+# beautiful alignment
+# display: flex transforms the container into:
+# “I will arrange everything inside me nicely.”
+# justify-content: center
+# → Align horizontally in the middle
+# gap: 20px
+# → Add equal spacing
+# align-items: center
+# → Align vertically inside each card
